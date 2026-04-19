@@ -1,0 +1,1 @@
+import{a as e,i as t,n,o as r,r as i,s as a,t as o}from"./shared-DDwVGspo.js";r(),i(),a(),e(`about`),t(),n(),o();
