@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pushkar Biswas — CS student, AI enthusiast, Google Arcade champion, and future Google SWE. Explore the ultimate interactive portfolio." />
+  <title>Pushkar Biswas — Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Nav, cursor, scroll progress injected by JS -->
+
+  <!-- Hero Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Ambient Orbs -->
+  <div class="page-orbs">
+    <div class="orb orb-blue"></div>
+    <div class="orb orb-red"></div>
+    <div class="orb orb-yellow"></div>
+    <div class="orb orb-green"></div>
+  </div>
+
+  <main style="position:relative;z-index:2;">
+
+    <!-- ═══ HERO ══════════════════════════════════════════════════ -->
+    <section id="home-hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="hero-badge fade-in" style="--d:.1s">
+            <div class="google-dots">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            &nbsp;Google Fanboy · Arcade Champion · Future SWE
+          </div>
+
+          <h1 class="hero-name fade-in" style="--d:.2s">
+            Pushkar<br />
+            <span class="line2">Biswas</span>
+          </h1>
+
+          <div class="hero-roles fade-in" style="--d:.35s">
+            I build&nbsp;
+            <span class="typed-wrap">
+              <span id="typedText"></span><span class="typed-cursor">|</span>
+            </span>
+          </div>
+
+          <p class="hero-tagline fade-in" style="--d:.5s">
+            Passionate about AI-driven systems, modern web experiences,<br class="br-hide" />
+            and scalable software that actually matters.
+          </p>
+
+          <div class="hero-actions fade-in" style="--d:.65s">
+            <a href="./pages/projects.html" class="btn btn-primary" id="hero-projects-btn">
+              <span>View My Work</span>
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </a>
+            <a href="./pages/lab.html" class="btn btn-blue" id="hero-lab-btn">
+              <span>3D Lab</span>
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2l6 3.5v5L8 14l-6-3.5v-5L8 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="./pages/contact.html" class="btn btn-ghost" id="hero-contact-btn">Get in Touch</a>
+          </div>
+
+          <div class="hero-stats fade-in" style="--d:.8s">
+            <div class="stat">
+              <span class="stat-num" data-count="3">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="8">0</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- ═══ MARQUEE ════════════════════════════════════════════════ -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span class="marquee-item"><span class="m-dot blue"></span>HTML5</span>
+        <span class="marquee-item"><span class="m-dot red"></span>CSS3</span>
+        <span class="marquee-item"><span class="m-dot yellow"></span>JavaScript</span>
+        <span class="marquee-item"><span class="m-dot green"></span>React</span>
+        <span class="marquee-item"><span class="m-dot blue"></span>C Programming</span>
+        <span class="marquee-item"><span class="m-dot red"></span>Git &amp; GitHub</span>
+        <span class="marquee-item"><span class="m-dot yellow"></span>AI &amp; Prompt Eng.</span>
+        <span class="marquee-item"><span class="m-dot green"></span>Google Cloud</span>
+        <span class="marquee-item"><span class="m-dot blue"></span>Node.js</span>
+        <span class="marquee-item"><span class="m-dot red"></span>Three.js</span>
+        <span class="marquee-item"><span class="m-dot yellow"></span>System Design</span>
+        <span class="marquee-item"><span class="m-dot green"></span>Vite</span>
+        <!-- Duplicate -->
+        <span class="marquee-item"><span class="m-dot blue"></span>HTML5</span>
+        <span class="marquee-item"><span class="m-dot red"></span>CSS3</span>
+        <span class="marquee-item"><span class="m-dot yellow"></span>JavaScript</span>
+        <span class="marquee-item"><span class="m-dot green"></span>React</span>
+        <span class="marquee-item"><span class="m-dot blue"></span>C Programming</span>
+        <span class="marquee-item"><span class="m-dot red"></span>Git &amp; GitHub</span>
+        <span class="marquee-item"><span class="m-dot yellow"></span>AI &amp; Prompt Eng.</span>
+        <span class="marquee-item"><span class="m-dot green"></span>Google Cloud</span>
+        <span class="marquee-item"><span class="m-dot blue"></span>Node.js</span>
+        <span class="marquee-item"><span class="m-dot red"></span>Three.js</span>
+        <span class="marquee-item"><span class="m-dot yellow"></span>System Design</span>
+        <span class="marquee-item"><span class="m-dot green"></span>Vite</span>
+      </div>
+    </div>
+
+    <!-- ═══ EXPLORE THE PORTFOLIO ══════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-eyebrow reveal" style="--d:0s;color:var(--g-blue)">explore.portfolio</div>
+        <h2 class="section-title reveal" style="--d:.1s">Your Gateway to <span class="grad-text">Everything</span></h2>
+        <p class="section-sub reveal" style="--d:.2s">Navigate the pages of this portfolio — each crafted with purpose.</p>
+
+        <div class="quick-nav-grid">
+          <a href="./pages/about.html" class="quick-card reveal" style="--d:.05s">
+            <div class="qc-icon qc-blue">👨‍💻</div>
+            <div class="qc-body">
+              <h3>About Me</h3>
+              <p>Who I am, where I come from, and why I build things.</p>
+            </div>
+          </a>
+          <a href="./pages/skills.html" class="quick-card reveal" style="--d:.10s">
+            <div class="qc-icon qc-red">⚡</div>
+            <div class="qc-body">
+              <h3>Skills</h3>
+              <p>My tech arsenal — from HTML to AI, and Three.js WebGL.</p>
+            </div>
+          </a>
+          <a href="./pages/projects.html" class="quick-card reveal" style="--d:.15s">
+            <div class="qc-icon qc-yellow">🚀</div>
+            <div class="qc-body">
+              <h3>Projects</h3>
+              <p>Real-world builds and experiments that push limits.</p>
+            </div>
+          </a>
+          <a href="./pages/lab.html" class="quick-card reveal" style="--d:.20s">
+            <div class="qc-icon qc-green">🔮</div>
+            <div class="qc-body">
+              <h3>3D Lab</h3>
+              <p>Quantum Mirror — an interactive 10,000-particle WebGL universe.</p>
+            </div>
+          </a>
+          <a href="./pages/journey.html" class="quick-card reveal" style="--d:.25s">
+            <div class="qc-icon qc-blue">🗺️</div>
+            <div class="qc-body">
+              <h3>Journey</h3>
+              <p>My learning timeline — milestones on the road to Google.</p>
+            </div>
+          </a>
+          <a href="./pages/contact.html" class="quick-card reveal" style="--d:.30s">
+            <div class="qc-icon qc-red">📬</div>
+            <div class="qc-body">
+              <h3>Contact</h3>
+              <p>Let's build something great together. Say hi!</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GOOGLE LOVE SECTION ════════════════════════════════════ -->
+    <section class="section" style="background:rgba(66,133,244,0.02);border-top:1px solid rgba(66,133,244,0.08);border-bottom:1px solid rgba(66,133,244,0.08);">
+      <div class="container" style="text-align:center">
+        <div class="section-eyebrow reveal" style="--d:0s;justify-content:center;color:var(--g-blue)">google.love</div>
+        <h2 class="section-title reveal" style="--d:.1s">
+          Why&nbsp;
+          <strong style="color:#4285F4">G</strong><strong style="color:#EA4335">o</strong><strong style="color:#FBBC05">o</strong><strong style="color:#4285F4">g</strong><strong style="color:#34A853">l</strong><strong style="color:#EA4335">e</strong>
+          ?
+        </h2>
+        <p class="section-sub reveal" style="--d:.2s;margin:1rem auto 0;text-align:center;max-width:600px">
+          Google isn't just a company to me — it's a philosophy. Build things that work for everyone, at scale, with elegance. That's the standard I hold myself to every day.
+        </p>
+        <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;">
+          <div class="reveal" style="--d:.15s;display:flex;flex-direction:column;align-items:center;gap:.4rem">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(66,133,244,0.12);border:2px solid var(--g-blue);display:flex;align-items:center;justify-content:center;font-size:1.3rem">🏆</div>
+            <span style="font-size:.82rem;color:var(--text-muted);font-weight:600">Google Arcade<br/><small style="color:var(--g-blue)">Champion</small></span>
+          </div>
+          <div class="reveal" style="--d:.22s;display:flex;flex-direction:column;align-items:center;gap:.4rem">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(234,67,53,0.12);border:2px solid var(--g-red);display:flex;align-items:center;justify-content:center;font-size:1.3rem">☁️</div>
+            <span style="font-size:.82rem;color:var(--text-muted);font-weight:600">Google Cloud<br/><small style="color:var(--g-red)">Learner</small></span>
+          </div>
+          <div class="reveal" style="--d:.29s;display:flex;flex-direction:column;align-items:center;gap:.4rem">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(251,188,5,0.12);border:2px solid var(--g-yellow);display:flex;align-items:center;justify-content:center;font-size:1.3rem">🤖</div>
+            <span style="font-size:.82rem;color:var(--text-muted);font-weight:600">Google AI<br/><small style="color:var(--g-yellow)">Explorer</small></span>
+          </div>
+          <div class="reveal" style="--d:.36s;display:flex;flex-direction:column;align-items:center;gap:.4rem">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(52,168,83,0.12);border:2px solid var(--g-green);display:flex;align-items:center;justify-content:center;font-size:1.3rem">💼</div>
+            <span style="font-size:.82rem;color:var(--text-muted);font-weight:600">Future Google<br/><small style="color:var(--g-green)">SWE</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="./js/home.js"></script>
+</body>
+</html>

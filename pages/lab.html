@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quantum Mirror — Interactive 3D WebGL particle lab by Pushkar Biswas. 10,000-point live holographic experience." />
+  <title>3D Lab — Pushkar Biswas</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔮</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="page-orbs"><div class="orb orb-blue"></div><div class="orb orb-yellow"></div></div>
+  <div class="page-wrap">
+
+    <div class="page-hero">
+      <div class="container">
+        <div class="page-hero-eyebrow fade-in" style="--d:.1s;color:var(--g-blue)">lab.quantum</div>
+        <h1 class="page-hero-title fade-in" style="--d:.2s">The <span class="grad-text">3D Lab</span></h1>
+        <p style="font-size:1rem;color:var(--text-muted);margin-top:.75rem;text-align:center;max-width:540px;margin-left:auto;margin-right:auto" class="fade-in" style="--d:.3s">
+          An interactive WebGL particle universe powered by Three.js, GSAP, and your webcam.
+        </p>
+      </div>
+    </div>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+
+        <!-- The WebGL Frame -->
+        <div class="hologram-frame reveal" style="--d:.1s" id="hologram-frame">
+          <!-- Launch Overlay -->
+          <div class="holo-launch" id="holo-launch">
+            <div class="holo-launch-inner">
+              <div class="google-dots" style="justify-content:center;margin-bottom:1rem">
+                <span style="width:12px;height:12px"></span>
+                <span style="width:12px;height:12px"></span>
+                <span style="width:12px;height:12px"></span>
+                <span style="width:12px;height:12px"></span>
+              </div>
+              <div class="holo-title">QUANTUM MIRROR</div>
+              <p>A 10,000-point particle system that creates a live holographic mirror using your webcam and GPU computing.</p>
+              <div class="holo-btn-group">
+                <button class="holo-btn holo-btn-primary" id="holo-start">⚡ Activate Webcam Mirror</button>
+                <button class="holo-btn holo-btn-ghost" id="holo-skip">Proceed Without Camera</button>
+              </div>
+              <small>All processing is local on your GPU. No video is recorded or transmitted.</small>
+            </div>
+          </div>
+
+          <!-- Three.js Canvas -->
+          <canvas id="canvas3d"></canvas>
+
+          <!-- HUD (shown after launch) -->
+          <div class="holo-ui" id="holo-ui" style="opacity:0;pointer-events:none;transition:opacity 1.5s">
+            <nav class="holo-nav">
+              <div class="holo-logo">
+                <span>PUSHKAR.</span>
+                <div class="holo-status"><div class="holo-dot"></div>ONLINE // WEST_BENGAL</div>
+              </div>
+              <ul class="holo-nav-links">
+                <li class="holo-nav-item active" data-target="mirror"><span class="holo-num">00</span><span class="holo-label">LIVE_MIRROR</span></li>
+                <li class="holo-nav-item" data-target="dna"><span class="holo-num">01</span><span class="holo-label">GENESIS_DNA</span></li>
+                <li class="holo-nav-item" data-target="knot"><span class="holo-num">02</span><span class="holo-label">NEURAL_SKILLS</span></li>
+                <li class="holo-nav-item" data-target="grid"><span class="holo-num">03</span><span class="holo-label">PROJECT_MATRIX</span></li>
+              </ul>
+            </nav>
+            <div class="holo-content-wrap">
+              <div class="holo-panel active" id="holo-content-mirror">
+                <h3>QUANTUM REFLECTION</h3>
+                <p class="holo-sub">Real-time GPGPU Particle Processing</p>
+                <div class="holo-text"><strong>Try Moving Your Hands or Body.</strong><br>10,000-point fluid simulation. Your camera feed is converted into 3D vectors via raycasting and brightness-depth mapping. Move your mouse to repel the particles!</div>
+              </div>
+              <div class="holo-panel" id="holo-content-dna">
+                <h3>IDENTITY.BIO</h3>
+                <p class="holo-sub">Pushkar Biswas // 20 y/o // West Bengal</p>
+                <div class="holo-text">CST protocol at JIS School of Polytechnic.<br><br><strong>Active Missions:</strong><br>&gt; VOCLET 2026 Interface<br>&gt; Google Software Engineer Directive<br>&gt; Building extraordinary digital art</div>
+              </div>
+              <div class="holo-panel" id="holo-content-knot">
+                <h3>SYNAPTIC.LINKS</h3>
+                <p class="holo-sub">Technical Proficiency</p>
+                <div class="holo-text"><strong>Code Core:</strong> JavaScript, Node.js, Python, C.<br><br><strong>Deployment:</strong> Vercel, GitHub CI, Google Cloud.<br><br><strong>Specialties:</strong> AI Automation, WebGL Particle Systems, Google APIs.</div>
+              </div>
+              <div class="holo-panel" id="holo-content-grid">
+                <h3>CONSTRUCTS</h3>
+                <p class="holo-sub">Deployed Architectures</p>
+                <div class="holo-text"><strong>[01] Dynamic Weather Dashboard</strong><br>React + Vite + OpenWeatherMap API.<br><br><strong>[02] JISSP Complaint Portal</strong><br>React + Firebase + accountability tracking.<br><br><strong>[03] Quantum Mirror</strong><br>This very experience. Three.js + GSAP + GPGPU.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructions below frame -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-top:2rem">
+          <div class="glass-card reveal" style="--d:.2s;padding:1.25rem;border-top:2px solid var(--g-blue)">
+            <div style="font-size:1.5rem;margin-bottom:.5rem">🖱️</div>
+            <h4 style="font-size:.9rem;font-weight:700;margin-bottom:.3rem;color:var(--g-blue)">Mouse Repulsion</h4>
+            <p style="font-size:.8rem;color:var(--text-dim);line-height:1.5">Move your mouse inside the frame to repel the particles.</p>
+          </div>
+          <div class="glass-card reveal" style="--d:.3s;padding:1.25rem;border-top:2px solid var(--g-red)">
+            <div style="font-size:1.5rem;margin-bottom:.5rem">📷</div>
+            <h4 style="font-size:.9rem;font-weight:700;margin-bottom:.3rem;color:var(--g-red)">Webcam Mirror</h4>
+            <p style="font-size:.8rem;color:var(--text-dim);line-height:1.5">Activate webcam for a real-time holographic face mirror.</p>
+          </div>
+          <div class="glass-card reveal" style="--d:.4s;padding:1.25rem;border-top:2px solid var(--g-yellow)">
+            <div style="font-size:1.5rem;margin-bottom:.5rem">🧬</div>
+            <h4 style="font-size:.9rem;font-weight:700;margin-bottom:.3rem;color:var(--g-yellow)">Morph Shapes</h4>
+            <p style="font-size:.8rem;color:var(--text-dim);line-height:1.5">Switch between DNA, Neural Knot, and Matrix modes.</p>
+          </div>
+          <div class="glass-card reveal" style="--d:.5s;padding:1.25rem;border-top:2px solid var(--g-green)">
+            <div style="font-size:1.5rem;margin-bottom:.5rem">🎵</div>
+            <h4 style="font-size:.9rem;font-weight:700;margin-bottom:.3rem;color:var(--g-green)">Audio Reactive</h4>
+            <p style="font-size:.8rem;color:var(--text-dim);line-height:1.5">If mic is enabled, particles pulse to your voice and music.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Hidden webcam DOM for particle engine -->
+  <video id="webcam" autoplay playsinline style="display:none"></video>
+  <canvas id="vCanvas" width="100" height="100" style="display:none"></canvas>
+
+  <script type="module" src="../js/lab.js"></script>
+</body>
+</html>
