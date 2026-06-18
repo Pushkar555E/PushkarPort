@@ -3,6 +3,38 @@
    Import this in every page's JS to get the nav and footer
    ===================================================================== */
 
+export function getLink(target) {
+  const isRoot = !window.location.pathname.includes('/pages/');
+  const isLocalServer = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const isFileProtocol = window.location.protocol === 'file:';
+
+  const PRODUCTION_DOMAINS = {
+    dev: 'https://your-dev-portfolio-url.com',
+    mkt: 'https://your-marketing-url.com',
+    cafe: 'https://your-cybercafe-url.com'
+  };
+
+  const DEV_PORTS = {
+    dev: 'http://localhost:5173',
+    mkt: 'http://localhost:5174',
+    cafe: 'http://localhost:5175'
+  };
+
+  const RELATIVE_PATHS = {
+    dev: isRoot ? './index.html' : '../index.html',
+    mkt: isRoot ? '../dmsite/index.html' : '../../dmsite/index.html',
+    cafe: isRoot ? '../esite/index.html' : '../../esite/index.html'
+  };
+
+  if (isFileProtocol) {
+    return RELATIVE_PATHS[target];
+  } else if (isLocalServer) {
+    return DEV_PORTS[target];
+  } else {
+    return PRODUCTION_DOMAINS[target];
+  }
+}
+
 export function injectNav(activePage = '') {
   const nav = document.createElement('nav');
   nav.className = 'nav';
@@ -13,6 +45,7 @@ export function injectNav(activePage = '') {
     { href: '../pages/about.html',   label: 'About',    key: 'about' },
     { href: '../pages/skills.html',  label: 'Skills',   key: 'skills' },
     { href: '../pages/projects.html',label: 'Projects', key: 'projects' },
+    { href: '../pages/blog.html',    label: 'Blog',     key: 'blog' },
     { href: '../pages/lab.html',     label: '3D Lab',   key: 'lab' },
     { href: '../pages/journey.html', label: 'Journey',  key: 'journey' },
     { href: '../pages/contact.html', label: 'Contact',  key: 'contact', cta: true },
@@ -36,7 +69,9 @@ export function injectNav(activePage = '') {
         <div class="google-dots"><span></span><span></span><span></span><span></span></div>
         <span class="nav-logo-text">PUSHKAR.</span>
       </a>
-      <ul class="nav-links" id="navLinks">${linksHTML}</ul>
+      <ul class="nav-links" id="navLinks">
+        ${linksHTML}
+      </ul>
       <div class="nav-time">
         <div class="nav-time-dot"></div>
         <span id="navTime">00:00:00</span>
@@ -46,7 +81,9 @@ export function injectNav(activePage = '') {
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <ul>${linksHTML}</ul>
+      <ul>
+        ${linksHTML}
+      </ul>
     </div>
   `;
 
@@ -74,6 +111,39 @@ export function injectNav(activePage = '') {
 }
 
 export function injectFooter() {
+  const marketingHref = getLink('mkt');
+  const cyberHref = getLink('cafe');
+
+  // Create Ecosystem Gateway Banner
+  const ecoSection = document.createElement('section');
+  ecoSection.className = 'ecosystem-section reveal';
+  ecoSection.innerHTML = `
+    <div class="container">
+      <div class="ecosystem-card">
+        <h3>Looking for Technical Development or Marketing Solutions?</h3>
+        <p>Explore my other specialized portfolios and ventures built for modern scale.</p>
+        <div class="ecosystem-buttons">
+          <a href="${marketingHref}" class="btn-ecosystem client-marketing-btn" target="_blank" rel="noopener">
+            <span class="btn-icon">📈</span>
+            <div class="btn-text">
+              <span class="btn-title">Pushkar Growth Digital</span>
+              <span class="btn-subtitle">Data-Driven Digital Marketing</span>
+            </div>
+          </a>
+          <a href="${cyberHref}" class="btn-ecosystem client-cyber-btn" target="_blank" rel="noopener">
+            <span class="btn-icon">🖥️</span>
+            <div class="btn-text">
+              <span class="btn-title">Pushkar Digital Point</span>
+              <span class="btn-subtitle">e-Services &amp; Cyber Cafe Desk</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(ecoSection);
+
+  // Create Footer
   const footer = document.createElement('footer');
   footer.innerHTML = `
     <div class="footer-inner">
@@ -98,6 +168,11 @@ export function injectFooter() {
     </div>
   `;
   document.body.appendChild(footer);
+  
+  // Re-initialize reveals for the ecosystem section
+  if (typeof initReveal === 'function') {
+    initReveal();
+  }
 }
 
 export function injectOrbBackground() {

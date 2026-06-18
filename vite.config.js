@@ -13,6 +13,7 @@ export default defineConfig({
         about:    resolve(__dirname, 'pages/about.html'),
         skills:   resolve(__dirname, 'pages/skills.html'),
         projects: resolve(__dirname, 'pages/projects.html'),
+        blog:     resolve(__dirname, 'pages/blog.html'),
         lab:      resolve(__dirname, 'pages/lab.html'),
         journey:  resolve(__dirname, 'pages/journey.html'),
         contact:  resolve(__dirname, 'pages/contact.html'),

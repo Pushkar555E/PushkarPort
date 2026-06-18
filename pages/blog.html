@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pushkar Biswas's tech blog — sharing insights on AI, modern web engineering, Google Cloud, and software scale." />
+  <title>Blog — Pushkar Biswas</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="page-orbs">
+    <div class="orb orb-blue"></div>
+    <div class="orb orb-red"></div>
+    <div class="orb orb-yellow"></div>
+    <div class="orb orb-green"></div>
+  </div>
+  <div class="page-wrap">
+
+    <div class="page-hero">
+      <div class="container">
+        <div class="page-hero-eyebrow fade-in" style="--d:.1s;color:var(--g-blue)">blog.insights</div>
+        <h1 class="page-hero-title fade-in" style="--d:.2s">Tech &amp; <span class="grad-text">Developer Log</span></h1>
+        <p class="fade-in" style="--d:.3s;font-size:1rem;color:var(--text-muted);margin-top:.75rem;text-align:center">Deep-dives into systems engineering, WebGL particles, and learning pathways to Google</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-eyebrow reveal" style="--d:0s;color:var(--g-blue)">articles.feed</div>
+        <h2 class="section-title reveal" style="--d:.1s">Recent Writings</h2>
+        <div class="portfolio-blog-grid" id="portfolio-blog-grid">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Blog Details Modal -->
+  <div class="blog-modal" id="portfolio-blog-modal" aria-hidden="true">
+    <div class="blog-modal-backdrop" id="portfolio-blog-modal-close-bg"></div>
+    <div class="blog-modal-content">
+      <button class="blog-modal-close" id="portfolio-blog-modal-close-btn" aria-label="Close insight">&times;</button>
+      <div class="blog-modal-body" id="portfolio-blog-reader-content">
+        <!-- Dynamically populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/blog.js"></script>
+</body>
+</html>
