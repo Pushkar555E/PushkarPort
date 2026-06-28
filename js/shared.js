@@ -157,7 +157,7 @@ export function injectFooter() {
       <p class="footer-tagline">Built with ❤️ &amp; a love for <strong style="color:#4285F4">G</strong><strong style="color:#EA4335">o</strong><strong style="color:#FBBC05">o</strong><strong style="color:#4285F4">g</strong><strong style="color:#34A853">l</strong><strong style="color:#EA4335">e</strong></p>
       <p class="footer-meta">© 2025 · Pushkar Biswas · Aspiring Google SWE</p>
       <div class="footer-links">
-        <a href="https://github.com/Pushkar005-b" target="_blank">GitHub</a>
+        <a href="https://github.com/Pushkar555E" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/pushkarbiswas" target="_blank">LinkedIn</a>
         <a href="https://www.facebook.com/pushkarbiswas79/" target="_blank">Facebook</a>
         <a href="mailto:pushkar@example.com">Email</a>
