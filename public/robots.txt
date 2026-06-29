@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Specifically allow ChatGPT and AI crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
