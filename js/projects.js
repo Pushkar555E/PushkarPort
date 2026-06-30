@@ -25,3 +25,34 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
   });
 });
+
+/* Project Filtering */
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove active class from all
+    filterBtns.forEach(b => {
+      b.classList.remove('active');
+      b.style.border = 'none';
+    });
+    // Add active class to clicked
+    btn.classList.add('active');
+    btn.style.border = '1px solid var(--g-blue)';
+
+    const filter = btn.getAttribute('data-filter');
+    
+    projectCards.forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        card.style.display = 'flex';
+        // Add a slight animation
+        card.style.animation = 'none';
+        card.offsetHeight; // trigger reflow
+        card.style.animation = 'floatUp 0.6s cubic-bezier(.22,1,.36,1) forwards';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});

@@ -77,7 +77,7 @@ initGlassCardGlow();
 (function initTypewriter() {
   const el = document.getElementById('typedText');
   if (!el) return;
-  const roles = ['AI-driven apps.', 'modern web experiences.', '3D WebGL universes.', 'scalable systems.', 'beautiful UIs.', 'the future. ⚡'];
+  const roles = ['performance.', 'SEO.', 'beautiful user experiences.', 'accessibility.', 'scalable systems.', 'business growth.'];
   let roleIdx = 0, charIdx = 0, deleting = false;
   const type = () => {
     const cur = roles[roleIdx];

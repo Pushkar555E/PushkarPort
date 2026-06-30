@@ -3,14 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pushkar Biswas — CS student, AI enthusiast, Google Arcade champion, and future Google SWE. Explore the ultimate interactive portfolio." />
-  <title>Pushkar Biswas — Portfolio</title>
   
-  <!-- Open Graph & AI Crawler Metadata -->
-  <meta property="og:title" content="Pushkar Biswas — Portfolio" />
-  <meta property="og:description" content="Pushkar Biswas — CS student, AI enthusiast, Google Arcade champion, and future Google SWE. Explore the ultimate interactive portfolio." />
+  <!-- Preconnect & Preload Fonts for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&family=Syncopate:wght@400;700&display=swap" as="style" />
+  
+  <meta name="description" content="Pushkar Biswas — Software Engineer focused on performance, SEO, and beautiful user experiences. Explore my portfolio of scalable applications." />
+  <title>Pushkar Biswas — Software Engineer Portfolio</title>
+  
+  <!-- SEO & Canonical URL -->
+  <link rel="canonical" href="https://pushkar-port-chyx.vercel.app/" />
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pushkar-port-chyx.vercel.app/" />
+  <meta property="og:title" content="Pushkar Biswas — Software Engineer" />
+  <meta property="og:description" content="Software Engineer focused on performance, SEO, and beautiful user experiences." />
+  <meta property="og:image" content="https://pushkar-port-chyx.vercel.app/Growth_logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://pushkar-port-chyx.vercel.app/" />
+  <meta name="twitter:title" content="Pushkar Biswas — Software Engineer" />
+  <meta name="twitter:description" content="Software Engineer focused on performance, SEO, and beautiful user experiences." />
+  <meta name="twitter:image" content="https://pushkar-port-chyx.vercel.app/Growth_logo.png" />
+
   <meta name="robots" content="index, follow" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
   <link rel="stylesheet" href="./style.css" />
@@ -68,15 +86,14 @@
           </h1>
 
           <div class="hero-roles fade-in" style="--d:.35s">
-            I build&nbsp;
+            Software Engineer focused on&nbsp;
             <span class="typed-wrap">
               <span id="typedText"></span><span class="typed-cursor">|</span>
             </span>
           </div>
 
           <p class="hero-tagline fade-in" style="--d:.5s">
-            Passionate about AI-driven systems, modern web experiences,<br class="br-hide" />
-            and scalable software that actually matters.
+            Building fast, scalable applications that help businesses grow, solve complex problems, and deliver beautiful user experiences.
           </p>
 
           <div class="hero-actions fade-in" style="--d:.65s">
@@ -84,25 +101,33 @@
               <span>View My Work</span>
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </a>
-            <a href="./pages/lab.html" class="btn btn-blue" id="hero-lab-btn">
-              <span>3D Lab</span>
-              <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2l6 3.5v5L8 14l-6-3.5v-5L8 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <a href="./resume.pdf" class="btn btn-blue" id="hero-resume-btn" download>
+              <span>Download Resume</span>
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 12l-4-4h2.5V2h3v6H12L8 12zM2 14v2h12v-2H2z" fill="currentColor"/></svg>
             </a>
             <a href="./pages/contact.html" class="btn btn-ghost" id="hero-contact-btn">Get in Touch</a>
           </div>
 
-          <div class="hero-stats fade-in" style="--d:.8s">
+          <div class="hero-stats fade-in" style="--d:.8s; display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:2rem;">
             <div class="stat">
-              <span class="stat-num" data-count="3">0</span>
+              <span class="stat-num" data-count="15">0</span>
               <span class="stat-label">Projects</span>
             </div>
             <div class="stat">
-              <span class="stat-num" data-count="8">0</span>
-              <span class="stat-label">Technologies</span>
+              <span class="stat-num" data-count="300">0</span>
+              <span class="stat-label">Commits</span>
             </div>
             <div class="stat">
-              <span class="stat-num">∞</span>
-              <span class="stat-label">Curiosity</span>
+              <span class="stat-num" data-count="12">0</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="4">0</span>
+              <span class="stat-label">Hackathons</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="50">0</span>
+              <span class="stat-label">Badges</span>
             </div>
           </div>
         </div>
@@ -144,6 +169,79 @@
         <span class="marquee-item"><span class="m-dot green"></span>Vite</span>
       </div>
     </div>
+
+    <!-- ═══ SOCIAL PROOF & TRUST ═══════════════════════════════════ -->
+    <section class="section" style="background:rgba(255,255,255,0.01); border-bottom:1px solid rgba(255,255,255,0.05);">
+      <div class="container" style="text-align:center">
+        <div class="section-eyebrow reveal" style="--d:0s; justify-content:center; color:var(--g-yellow)">proven.results</div>
+        <h2 class="section-title reveal" style="--d:.1s">Trusted by <span class="grad-text">Numbers</span></h2>
+        <p class="section-sub reveal" style="--d:.2s" style="margin:1rem auto; max-width:600px;">Actions speak louder than words. Here are the milestones that showcase my dedication to software engineering.</p>
+
+        <div style="display:flex; gap:2rem; justify-content:center; flex-wrap:wrap; margin-top:3rem;">
+          
+          <div class="reveal" style="--d:.15s; display:flex; flex-direction:column; align-items:center; gap:.5rem;">
+            <div style="font-size:2rem; color:var(--g-blue);">🏆</div>
+            <div style="font-weight:700; font-size:1.1rem; color:var(--text-bright);">Google Arcade</div>
+            <div style="font-size:0.85rem; color:var(--text-muted);">50+ Skill Badges Earned</div>
+          </div>
+
+          <div class="reveal" style="--d:.25s; display:flex; flex-direction:column; align-items:center; gap:.5rem;">
+            <div style="font-size:2rem; color:var(--g-red);">📜</div>
+            <div style="font-weight:700; font-size:1.1rem; color:var(--text-bright);">12 Certifications</div>
+            <div style="font-size:0.85rem; color:var(--text-muted);">Cloud, AI & Development</div>
+          </div>
+
+          <div class="reveal" style="--d:.35s; display:flex; flex-direction:column; align-items:center; gap:.5rem;">
+            <div style="font-size:2rem; color:var(--g-yellow);">💻</div>
+            <div style="font-weight:700; font-size:1.1rem; color:var(--text-bright);">4 Hackathons</div>
+            <div style="font-size:0.85rem; color:var(--text-muted);">Built under pressure</div>
+          </div>
+
+          <div class="reveal" style="--d:.45s; display:flex; flex-direction:column; align-items:center; gap:.5rem;">
+            <div style="font-size:2rem; color:var(--g-green);">🌐</div>
+            <div style="font-weight:700; font-size:1.1rem; color:var(--text-bright);">Open Source</div>
+            <div style="font-size:0.85rem; color:var(--text-muted);">Active GitHub Contributor</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CODING PROFILES & GITHUB STATS ═════════════════════════ -->
+    <section class="section" style="background:rgba(66,133,244,0.02); border-bottom:1px solid rgba(255,255,255,0.05);">
+      <div class="container" style="text-align:center">
+        <div class="section-eyebrow reveal" style="--d:0s; justify-content:center; color:var(--g-blue)">recruiter.checklist</div>
+        <h2 class="section-title reveal" style="--d:.1s">Coding <span class="grad-text">Footprint</span></h2>
+        <p class="section-sub reveal" style="--d:.2s" style="margin:1rem auto; max-width:600px;">Data-driven proof of my problem solving skills and open source contributions.</p>
+
+        <div style="display:flex; flex-direction:column; align-items:center; gap:2.5rem; margin-top:3rem;">
+          
+          <!-- Coding Profiles Links -->
+          <div class="reveal" style="--d:.3s; display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center;">
+            <a href="https://leetcode.com/u/Pushkar555E/" target="_blank" rel="noopener" class="btn btn-ghost" style="border:1px solid var(--border); display:flex; align-items:center; gap:0.5rem; color:#FFA116;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125 2.536 5.311 5.311 0 0 0 2.213 3.639 5.385 5.385 0 0 0 5.485.498 5.351 5.351 0 0 0 2.454-2.585 5.311 5.311 0 0 0 .232-2.738c-.08-.431-.225-.845-.429-1.229l-3.232 3.46c.148.19.336.347.551.464a2.915 2.915 0 0 1 1.055 2.235 2.946 2.946 0 0 1-1.632 2.378 2.955 2.955 0 0 1-2.912-.132 2.911 2.911 0 0 1-1.218-1.996 2.954 2.954 0 0 1 .65-2.502l6.233-6.671 2.457-2.632a1.374 1.374 0 0 0-.142-2.072 1.374 1.374 0 0 0-2.071.142l-2.458 2.632-4.041 4.327c-.201.214-.265.516-.168.799a.837.837 0 0 0 .584.582c.28.09.584.02.795-.184l6.096-6.527a1.374 1.374 0 0 0-1.89-1.992zM16.924 10.37a1.374 1.374 0 0 0-1.261 1.956 2.923 2.923 0 0 1 .094 2.32 2.912 2.912 0 0 1-1.282 1.543 2.96 2.96 0 0 1-2.046.22 2.934 2.934 0 0 1-1.748-1.077c-.198-.252-.455-.453-.746-.583a1.374 1.374 0 0 0-1.874 1.765 5.258 5.258 0 0 0 3.123 1.936 5.3 5.3 0 0 0 3.666-.39 5.228 5.228 0 0 0 2.298-2.766 5.253 5.253 0 0 0-.17-4.168 1.374 1.374 0 0 0-1.054-.756zm-4.707 6.438a1.374 1.374 0 1 0 0 2.748h8.506a1.374 1.374 0 1 0 0-2.748h-8.506z"/></svg>
+              <span>LeetCode Profile</span>
+            </a>
+            
+            <a href="https://www.hackerrank.com/profile/pushkarbiswas" target="_blank" rel="noopener" class="btn btn-ghost" style="border:1px solid var(--border); display:flex; align-items:center; gap:0.5rem; color:#00EA64;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0zm5.632 16.516H15.01V12.9H8.99v3.616H6.368V7.484H8.99v3.616h6.02V7.484h2.622v9.032z"/></svg>
+              <span>HackerRank Profile</span>
+            </a>
+          </div>
+
+          <!-- GitHub Graph -->
+          <div class="glass-card reveal" style="--d:.4s; padding:1.5rem; width:100%; max-width:900px; border-radius:var(--radius-lg); overflow-x:auto;">
+            <div style="font-weight:600; color:var(--text-bright); margin-bottom:1rem; display:flex; align-items:center; justify-content:space-between;">
+              <span style="display:flex; align-items:center; gap:0.5rem;"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--text)"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub Contributions</span>
+              <span style="font-size:0.85rem; color:var(--text-muted);">Real-time Activity</span>
+            </div>
+            <!-- GitHub chart from ghchart API. Filtered with a dark mode theme hex (e.g. 4285F4 for Google Blue) -->
+            <img src="https://ghchart.rshah.org/4285F4/Pushkar555E" alt="Pushkar's GitHub Contribution Graph" loading="lazy" style="width:100%; min-width:600px; border-radius:4px; filter: brightness(0.9) contrast(1.2) hue-rotate(5deg);" />
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- ═══ EXPLORE THE PORTFOLIO ══════════════════════════════════ -->
     <section class="section">

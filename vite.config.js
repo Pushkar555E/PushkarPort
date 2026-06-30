@@ -7,6 +7,12 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
     rollupOptions: {
       input: {
         main:     resolve(__dirname, 'index.html'),
@@ -18,6 +24,13 @@ export default defineConfig({
         journey:  resolve(__dirname, 'pages/journey.html'),
         contact:  resolve(__dirname, 'pages/contact.html'),
       },
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        }
+      }
     },
   },
 });

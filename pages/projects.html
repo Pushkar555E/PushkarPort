@@ -32,15 +32,30 @@
           </a>
         </div>
 
+        <div class="project-filters reveal" style="--d:.15s; margin-bottom: 2.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn btn-ghost filter-btn active" data-filter="all" style="border:1px solid var(--g-blue)">All</button>
+          <button class="btn btn-ghost filter-btn" data-filter="frontend">Frontend</button>
+          <button class="btn btn-ghost filter-btn" data-filter="backend">Backend</button>
+          <button class="btn btn-ghost filter-btn" data-filter="ai">AI</button>
+        </div>
+
         <div class="projects-grid">
-          <article class="project-card glass-card reveal" style="--d:0s">
+          <!-- Project 01 -->
+          <article class="project-card glass-card reveal" style="--d:0s" data-category="frontend">
             <div class="project-visual" style="--proj-bg:linear-gradient(135deg,#0a1628,#1e3a8a)">
               <span class="project-num">01</span><span class="project-emoji">🌤️</span>
             </div>
             <div class="project-body">
-              <div class="project-tags"><span class="ptag">React</span><span class="ptag">Vite</span><span class="ptag">API</span><span class="ptag">Tailwind</span></div>
               <h3 class="project-title">Dynamic Weather Dashboard</h3>
-              <p class="project-desc">Premium weather app with real-time OpenWeatherMap data, interactive maps, glassmorphism UI, and dynamic background themes that change with the weather.</p>
+              
+              <div class="project-story" style="margin: 1.5rem 0; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap:1rem;">
+                <div><strong style="color:var(--text-bright)">Problem:</strong> Generic weather apps lack engaging visual feedback based on real-time conditions.</div>
+                <div><strong style="color:var(--text-bright)">Solution:</strong> A premium dashboard with dynamic background themes that adapt to live weather data and a glassmorphism UI.</div>
+                <div><strong style="color:var(--text-bright)">Features:</strong> Real-time OpenWeatherMap data, Interactive maps, Dynamic themes.</div>
+                <div><strong style="color:var(--text-bright)">Tech Stack:</strong> <div class="project-tags" style="margin-top:0.5rem;"><span class="ptag">React</span><span class="ptag">Vite</span><span class="ptag">API</span><span class="ptag">Tailwind</span></div></div>
+                <div><strong style="color:var(--text-bright)">Challenges:</strong> Handling asynchronous API state and performance optimization for dynamic backgrounds.</div>
+              </div>
+
               <div class="project-links">
                 <a href="#" class="plink plink-primary">Live Demo</a>
                 <a href="https://github.com/Pushkar555E" target="_blank" class="plink plink-ghost">GitHub</a>
@@ -48,14 +63,22 @@
             </div>
           </article>
 
-          <article class="project-card glass-card reveal" style="--d:.1s">
+          <!-- Project 02 -->
+          <article class="project-card glass-card reveal" style="--d:.1s" data-category="backend">
             <div class="project-visual" style="--proj-bg:linear-gradient(135deg,#0d0f1e,#1e1b4b)">
               <span class="project-num">02</span><span class="project-emoji">🏛️</span>
             </div>
             <div class="project-body">
-              <div class="project-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span></div>
               <h3 class="project-title">College Event Management System</h3>
-              <p class="project-desc">Full frontend web app to manage and display college events. Features event listings, registration forms, and a responsive UI for students and faculty.</p>
+              
+              <div class="project-story" style="margin: 1.5rem 0; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap:1rem;">
+                <div><strong style="color:var(--text-bright)">Problem:</strong> Managing and discovering college events was scattered across various platforms and notice boards.</div>
+                <div><strong style="color:var(--text-bright)">Solution:</strong> A centralized frontend web app to manage and display all college events with a unified interface.</div>
+                <div><strong style="color:var(--text-bright)">Features:</strong> Event listings, registration forms, responsive UI for students and faculty.</div>
+                <div><strong style="color:var(--text-bright)">Tech Stack:</strong> <div class="project-tags" style="margin-top:0.5rem;"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span></div></div>
+                <div><strong style="color:var(--text-bright)">Challenges:</strong> Designing an intuitive interface that caters to both organizers and attendees effectively.</div>
+              </div>
+
               <div class="project-links">
                 <a href="#" class="plink plink-primary">View Project</a>
                 <a href="https://github.com/Pushkar555E" target="_blank" class="plink plink-ghost">GitHub</a>
@@ -63,14 +86,22 @@
             </div>
           </article>
 
-          <article class="project-card glass-card reveal" style="--d:.2s">
+          <!-- Project 03 -->
+          <article class="project-card glass-card reveal" style="--d:.2s" data-category="ai">
             <div class="project-visual" style="--proj-bg:linear-gradient(135deg,#0d0d1a,#1a0f30)">
               <span class="project-num">03</span><span class="project-emoji">🚀</span>
             </div>
             <div class="project-body">
-              <div class="project-tags"><span class="ptag">AI</span><span class="ptag">Concept</span><span class="ptag">Productivity</span></div>
               <h3 class="project-title">Life OS — AI Productivity System</h3>
-              <p class="project-desc">Conceptual AI-based personal OS unifying tasks, goals, habits, and learning in one intelligent dashboard. Designed for next-gen personal productivity.</p>
+              
+              <div class="project-story" style="margin: 1.5rem 0; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap:1rem;">
+                <div><strong style="color:var(--text-bright)">Problem:</strong> Existing productivity tools are fragmented, requiring multiple apps for tasks, habits, and goals.</div>
+                <div><strong style="color:var(--text-bright)">Solution:</strong> A conceptual AI-based personal OS unifying all productivity needs into one intelligent dashboard.</div>
+                <div><strong style="color:var(--text-bright)">Features:</strong> Tasks, goals, habits, and learning modules integrated with AI suggestions.</div>
+                <div><strong style="color:var(--text-bright)">Tech Stack:</strong> <div class="project-tags" style="margin-top:0.5rem;"><span class="ptag">AI</span><span class="ptag">Concept</span><span class="ptag">Productivity</span></div></div>
+                <div><strong style="color:var(--text-bright)">Challenges:</strong> Conceptualizing the AI integration flow and ensuring a seamless user experience across modules.</div>
+              </div>
+
               <div class="project-links">
                 <a href="#" class="plink plink-primary">View Concept</a>
                 <a href="https://github.com/Pushkar555E" target="_blank" class="plink plink-ghost">GitHub</a>
@@ -78,16 +109,24 @@
             </div>
           </article>
 
-          <article class="project-card glass-card reveal" style="--d:.3s">
+          <!-- Project 04 -->
+          <article class="project-card glass-card reveal" style="--d:.3s" data-category="frontend">
             <div class="project-visual" style="--proj-bg:linear-gradient(135deg,#010103,#0a0a20)">
               <span class="project-num">04</span>
               <span class="project-wip">⚙️ In Progress</span>
               <span class="project-emoji">🔮</span>
             </div>
             <div class="project-body">
-              <div class="project-tags"><span class="ptag">Three.js</span><span class="ptag">WebGL</span><span class="ptag">GSAP</span></div>
               <h3 class="project-title">Quantum Mirror — 3D WebGL Experience</h3>
-              <p class="project-desc">Interactive 10,000-point GPGPU particle system that reads your webcam to create a live holographic face. DNA, neural, and grid morphing modes.</p>
+              
+              <div class="project-story" style="margin: 1.5rem 0; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap:1rem;">
+                <div><strong style="color:var(--text-bright)">Problem:</strong> Web portfolios often lack interactive, "wow" factor elements that truly demonstrate technical depth.</div>
+                <div><strong style="color:var(--text-bright)">Solution:</strong> An interactive 10,000-point GPGPU particle system that reads your webcam to create a live holographic face.</div>
+                <div><strong style="color:var(--text-bright)">Features:</strong> Real-time webcam integration, DNA/neural/grid morphing modes, WebGL performance.</div>
+                <div><strong style="color:var(--text-bright)">Tech Stack:</strong> <div class="project-tags" style="margin-top:0.5rem;"><span class="ptag">Three.js</span><span class="ptag">WebGL</span><span class="ptag">GSAP</span></div></div>
+                <div><strong style="color:var(--text-bright)">Challenges:</strong> Optimizing GPGPU particle performance to maintain 60 FPS on average hardware.</div>
+              </div>
+
               <div class="project-links">
                 <a href="./lab.html" class="plink plink-primary">Launch 3D Lab</a>
                 <a href="https://github.com/Pushkar555E" target="_blank" class="plink plink-ghost">GitHub</a>
@@ -95,45 +134,23 @@
             </div>
           </article>
 
-          <article class="project-card glass-card reveal" style="--d:.4s">
-            <div class="project-visual" style="--proj-bg:linear-gradient(135deg,#0a1a06,#0f2012)">
-              <span class="project-num">05</span><span class="project-emoji">🏫</span>
-            </div>
-            <div class="project-body">
-              <div class="project-tags"><span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">Firebase</span></div>
-              <h3 class="project-title">JISSP Complaint Portal</h3>
-              <p class="project-desc">Institutional accountability tracking network. Students can submit complaints, track status, and receive real-time updates from administration.</p>
-              <div class="project-links">
-                <a href="#" class="plink plink-primary">View Project</a>
-                <a href="https://github.com/Pushkar555E" target="_blank" class="plink plink-ghost">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card glass-card reveal" style="--d:.5s">
-            <div class="project-visual" style="--proj-bg:linear-gradient(135deg,#1a0a06,#301a0f)">
-              <span class="project-num">06</span><span class="project-wip" style="color:var(--g-green);background:rgba(52,168,83,0.1);border-color:rgba(52,168,83,0.2)">🟢 Planning</span><span class="project-emoji">🤖</span>
-            </div>
-            <div class="project-body">
-              <div class="project-tags"><span class="ptag" style="color:var(--g-green);background:rgba(52,168,83,0.1);border-color:rgba(52,168,83,0.2)">Gemini AI</span><span class="ptag">Google Cloud</span></div>
-              <h3 class="project-title">AI Tools Suite (Google-Powered)</h3>
-              <p class="project-desc">A growing collection of AI utilities built on Gemini — smart summarizers, code assistants, and learning accelerators. Currently in planning phase.</p>
-              <div class="project-links">
-                <a href="#" class="plink" style="background:var(--g-green);color:white">Explore Suite</a>
-                <a href="https://github.com/Pushkar555E" target="_blank" class="plink plink-ghost">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card glass-card reveal" style="--d:.6s">
+          <!-- Project 05 -->
+          <article class="project-card glass-card reveal" style="--d:.6s" data-category="frontend">
             <div class="project-visual" style="--proj-bg:white; overflow: hidden; border-radius: 20px 20px 0 0;">
-              <span class="project-num" style="color: rgba(0,0,0,0.5); z-index: 2;">07</span>
+              <span class="project-num" style="color: rgba(0,0,0,0.5); z-index: 2;">05</span>
               <img src="../Growth_logo.png" alt="Growth Nest" class="project-emoji" style="width: 100%; height: 100%; object-fit: contain; background-color: white; padding: 2.5rem; position: absolute; inset: 0; z-index: 1; border-radius: 0;" />
             </div>
             <div class="project-body">
-              <div class="project-tags"><span class="ptag">Next.js</span><span class="ptag">Digital Marketing</span><span class="ptag">Client Site</span></div>
               <h3 class="project-title">Growth Nest — Digital Marketing Agency</h3>
-              <p class="project-desc">A premium, highly-converting digital marketing agency website built for a client. Features modern aesthetics, interactive elements, and an SEO-optimized structure.</p>
+              
+              <div class="project-story" style="margin: 1.5rem 0; font-size: 0.9rem; color: var(--text-muted); display:flex; flex-direction:column; gap:1rem;">
+                <div><strong style="color:var(--text-bright)">Problem:</strong> Client needed a high-converting, modern website to establish authority in the digital marketing space.</div>
+                <div><strong style="color:var(--text-bright)">Solution:</strong> A premium, SEO-optimized agency website built with modern aesthetics and fast load times.</div>
+                <div><strong style="color:var(--text-bright)">Features:</strong> Interactive elements, modern aesthetics, responsive design, SEO-optimized structure.</div>
+                <div><strong style="color:var(--text-bright)">Tech Stack:</strong> <div class="project-tags" style="margin-top:0.5rem;"><span class="ptag">Next.js</span><span class="ptag">Digital Marketing</span><span class="ptag">Client Site</span></div></div>
+                <div><strong style="color:var(--text-bright)">Challenges:</strong> Balancing visually complex animations with performance and SEO requirements.</div>
+              </div>
+
               <div class="project-links">
                 <a href="https://growth-fawn-two.vercel.app/" target="_blank" class="plink plink-primary">Live Demo</a>
                 <a href="https://github.com/Pushkar555E/growth.git" target="_blank" class="plink plink-ghost">GitHub</a>
